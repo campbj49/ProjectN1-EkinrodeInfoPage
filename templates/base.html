@@ -12,15 +12,6 @@
         {% endif %}
     {% endwith %}
     <!--Tweaked base HTML from lesson-->
-    <head>
-    <title>{{title}}</title>
-    {% if 'username' in session %}
-    <li><a href="/logout">Logout</a></li>
-    <li><a href="/user/{{session['username']}}">Secret</a></li>
-    {%else%}
-    <li><a href="/login">Login</a></li>
-    {% endif %}
-    </head>
     <body>
     <h1>{{header}}</h1>
     {% block content %} Body Content{% endblock%}
